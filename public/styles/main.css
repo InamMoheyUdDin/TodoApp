@@ -1,0 +1,182 @@
+html {
+  background-color: #e4e9fd;
+  background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e4e9fd 50%);
+  min-height: 1000px;
+  font-family: "helvetica neue";
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  min-height: 95vh;
+}
+
+.container {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: block;
+      margin-top: 100px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      background: #007BFF;
+      border-radius: 5px;
+    }
+
+    .login-btn{
+      color: #007BFF;
+      padding: 10px 20px;
+      width: 30%;
+      background: #28a745;
+      color: white;
+    }
+
+    .btn:hover, .login-btn {
+      background: #0056b3;
+    }
+
+    .register {
+      background: #28a745;
+    }
+
+    .register-btn{
+      color: white;
+      padding: 10px 20px;
+      width: 30%;
+      background: #28a745;
+    }
+
+    .register:hover, .register-btn:hover {
+      background: #1e7e34;
+    }
+
+.register-input{
+  display: block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 50%;
+}
+main {
+  text-align: center;
+  flex: 1 0 auto;
+}
+h1 {
+  color: #000000;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.duration{
+  max-width: 400px;
+  height: 50px;
+  font-size: 20px;
+  border: none;
+  background-color: #a683e3;
+  color: white;
+
+}
+#heading {
+  background-color: #a683e3;
+  text-align: center;
+}
+form.edit {
+  display: flex;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+  margin-left: 0;
+}
+
+p {
+  margin: 0;
+  padding: 20px 0;
+  font-size: 20px;
+  color: #00204a;
+}
+
+form {
+  text-align: center;
+  margin-left: 20px;
+}
+
+button.add {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #a683e3;
+  color: #fff;
+  font-size: 30px;
+  border-width: 0;
+}
+
+button.edit {
+  margin-left: 0px;
+  margin-right: 20px;
+  border: none;
+  background: none;
+}
+
+.icon {
+  height: 20px;
+}
+
+input[type="text"] {
+  text-align: left;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 80%;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #a683e3;
+}
+
+::placeholder {
+  color: lightgray;
+  opacity: 1;
+}
+
+footer {
+  flex: 0 0 auto;
+  color: white;
+  text-align: center;
+}
