@@ -2,10 +2,12 @@ import {
     getTodosByID,
     createNewTodo,
     updateTodo,
-    deleteTodoByID
+    deleteTodoByID,
 } from "../services/TodoServices.js"
 
-export const renderHome = (req, res) =>{
+import { runAgent } from "../services/ai-services.js"
+
+export const renderHome = (req, res) => {
     res.render("home.ejs")
 }
 
@@ -46,7 +48,7 @@ export const deleteTodo = async (req, res) => {
     res.redirect("/todos")
 }
 
-export const setDuration = (req, res) =>{
+export const setDuration = (req, res) => {
     req.session.duration = req.body.duration
     res.redirect("/todos")
 }

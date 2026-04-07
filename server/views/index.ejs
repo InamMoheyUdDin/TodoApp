@@ -2,11 +2,11 @@
 
   <div class="box" id="heading">
     <form method="post" action="/duration">
-    <select name="duration" class="duration" onchange="this.form.submit()">
-      <option value="today" <%= duration=="today" ? "selected" : "" %>>Today</option>
-      <option value="weekly" <%= duration=="weekly" ? "selected" : "" %>>Weekly</option>
-      <option value="monthly" <%= duration==="monthly" ? "selected" : "" %>>Monthly</option>
-    </select>
+      <select name="duration" class="duration" onchange="this.form.submit()">
+        <option value="today" <%=duration=="today" ? "selected" : "" %>>Today</option>
+        <option value="weekly" <%=duration=="weekly" ? "selected" : "" %>>Weekly</option>
+        <option value="monthly" <%=duration==="monthly" ? "selected" : "" %>>Monthly</option>
+      </select>
     </form>
   </div>
   <div class="box">
@@ -35,6 +35,10 @@
         <form class="item" action="/add" method="post">
           <input type="text" name="newItem" placeholder="New Item" autocomplete="off" autofocus="true" />
           <button class="add" type="submit" name="list" value=<%=listTitle %> >+</button>
+        </form>
+        <form action="/ai-agent" method="POST">
+          <input name="prompt" placeholder="e.g. plan my day" />
+          <button type="submit">Ask AI</button>
         </form>
   </div>
 

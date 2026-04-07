@@ -11,9 +11,10 @@ import express from "express";
 import bodyParser from "body-parser";
 import session from "express-session";
 import dotenv from "dotenv";
-import passport from "./server/config/passport.js";
-import todoRoutes from "./server/routes/todoRoutes.js";
-import authRoutes from "./server/routes/authRoutes.js";
+import passport from "./config/passport.js";
+import todoRoutes from "./routes/todoRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
+import aiRoutes from "./routes/aiRoutes.js"
 
 const app = express();
 const port = 3000;
@@ -43,6 +44,7 @@ app.use(passport.session());
 
 app.use("/", todoRoutes);
 app.use("/", authRoutes);
+app.use("/", aiRoutes);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
