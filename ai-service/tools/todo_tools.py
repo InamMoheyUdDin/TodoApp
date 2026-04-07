@@ -7,10 +7,10 @@ current_user_id = None
 @tool
 async def add_task(task: str):
     """Add the task given into a todo database"""
-    await requests.post(
+    requests.post(
         "http://localhost:3000/api/add-todo",
         json={
-            "input": task,
+            "title": task,
             "user_id": current_user_id
         }
     )

@@ -5,6 +5,6 @@ import { isAuthenticated } from "../middleware/auth.js"
 const router = express.Router()
 
 router.post("/ai-agent", isAuthenticated, aiAgentController)
-router.post("api/add-todo", isAuthenticated, aiAgentAddTodo)
+router.post("/api/add-todo", aiAgentAddTodo)
 
 export default router
