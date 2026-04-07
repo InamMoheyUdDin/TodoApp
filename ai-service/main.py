@@ -6,13 +6,14 @@ app = FastAPI()
 
 class UserInput(BaseModel):
     text: str = Field(...)
+    user_id = int = Field(...)
 
 
 @app.post("/agent")
-async def add_todo(userInput: UserInput):
+def add_todo(userInput: UserInput):
     print(userInput.text)
     response = agent.invoke({
-        "message": [{"role": "user", "content": userInput.text}]
+        "messages": [{"role": "user", "content": userInput.text}]
     })
     return {"response": response}
 

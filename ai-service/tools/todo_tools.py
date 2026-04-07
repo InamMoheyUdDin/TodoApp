@@ -1,17 +1,17 @@
-from langchain.agents import create_agent
+import httpx
 from langchain_core.tools import tool
-import requests
-
-current_user_id = None
 
 @tool
-async def add_task(task: str):
-    """Add the task given into a todo database"""
-    requests.post(
-        "http://localhost:3000/api/add-todo",
-        json={
-            "title": task,
-            "user_id": current_user_id
-        }
-    )
+async def add_task(task: str, user_id: int):
+    """Add a task to the todo database"""
+
+    async with httpx.AsyncClient() as client:
+        await client.post(
+            "http://localhost:3000/api/add-todo",
+            json={
+                "title": task,
+                "user_id": user_id
+            }
+        )
+
     return f"Added todo: {task}"
